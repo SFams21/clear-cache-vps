@@ -26,3 +26,22 @@ sh cleaner-tools.sh
 
 ```
 ---------
+
+[ USE COMMAND FROM TERMINAL ]
+
+```bas
+echo 1 > /proc/sys/vm/drop_caches
+echo 2 > /proc/sys/vm/drop_caches
+echo 3 > /proc/sys/vm/drop_caches
+script otomatis flush cache:
+
+# crontab -e
+0 * * *  * sync; echo 3 > /proc/sys/vm/drop_caches
+perintah diatas akan menjalankan perintah sync; echo 3 > /proc/sys/vm/drop_caches setiap 1 jam
+
+untuk memeriksa cache memory
+
+free -m
+
+```
+---------
